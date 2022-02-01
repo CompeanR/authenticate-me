@@ -6,11 +6,13 @@ router.use("/session", sessionRouter);
 
 router.use("/users", usersRouter);
 
-router.post("test", (req, res) => {
-  res.son({ requestBody: req.body });
-});
-
 module.exports = router;
+
+// ---------------- ROUTE TO TESTING POST REQUESTS ----------------
+
+// router.post("/test", (req, res) => {
+//   res.json({ requestBody: req.body });
+// });
 
 // ------------TESTING THE JWT--------------
 
