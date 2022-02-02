@@ -35,7 +35,7 @@ const LoginFormPage = () => {
               ))}
             </ul>
             <div className="login__field">
-              <i class="login__icon fas fa-user"></i>
+              <i className="login__icon fas fa-user"></i>
               <input
                 className="login__input"
                 type="text"
@@ -46,10 +46,10 @@ const LoginFormPage = () => {
               />
             </div>
             <div className="login__field">
-              <i class="login__icon fas fa-lock"></i>
+              <i className="login__icon fas fa-lock"></i>
               <input
                 className="login__input"
-                type="text"
+                type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Password"
@@ -58,15 +58,15 @@ const LoginFormPage = () => {
             </div>
             <button type="submit" className="button login__submit">
               <span className="button__text">Log In Now</span>
-              <i class="button__icon fas fa-chevron-right"></i>
+              <i className="button__icon fas fa-chevron-right"></i>
             </button>
           </form>
-          <div class="social-login">
+          <div className="social-login">
             <h3>log in via</h3>
-            <div class="social-icons">
-              <a href="#" class="social-login__icon fab fa-instagram"></a>
-              <a href="#" class="social-login__icon fab fa-facebook"></a>
-              <a href="#" class="social-login__icon fab fa-twitter"></a>
+            <div className="social-icons">
+              <a href="#" className="social-login__icon fab fa-instagram"></a>
+              <a href="#" className="social-login__icon fab fa-facebook"></a>
+              <a href="#" className="social-login__icon fab fa-twitter"></a>
             </div>
           </div>
         </div>
