@@ -58,9 +58,19 @@ const LoginFormPage = () => {
             </div>
             <button type="submit" className="button login__submit">
               <span className="button__text">Log In Now</span>
+              <i class="button__icon fas fa-chevron-right"></i>
             </button>
           </form>
+          <div class="social-login">
+            <h3>log in via</h3>
+            <div class="social-icons">
+              <a href="#" class="social-login__icon fab fa-instagram"></a>
+              <a href="#" class="social-login__icon fab fa-facebook"></a>
+              <a href="#" class="social-login__icon fab fa-twitter"></a>
+            </div>
+          </div>
         </div>
+
         <div className="screen__background">
           <span className="screen__background__shape screen__background__shape4"></span>
           <span className="screen__background__shape screen__background__shape3"></span>
