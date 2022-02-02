@@ -10,19 +10,26 @@ const SignupFormPage = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState([]);
 
   if (sessionUser) return <Redirect to="/" />;
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setErrors([]);
-    return dispatch(sessionActions.signup({ username, email, password })).catch(
-      async (res) => {
+    if (password === confirmPassword) {
+      setErrors([]);
+      return dispatch(
+        sessionActions.signup({ username, email, password })
+      ).catch(async (res) => {
         const data = await res.json();
         if (data && data.errors) setErrors(data.errors);
-      }
-    );
+      });
+    }
+
+    return setErrors([
+      "Confirm Password field must be the same as the Password field",
+    ]);
   };
 
   return (
@@ -65,6 +72,17 @@ const SignupFormPage = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Password"
+                required
+              />
+            </div>
+            <div className="login__field">
+              <i className="login__icon fas fa-lock"></i>
+              <input
+                className="login__input"
+                type="password"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                placeholder="Confirm Password"
                 required
               />
             </div>
