@@ -1,7 +1,8 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
 import React, { useState } from "react";
 import * as sessionActions from "../../store/session";
 import { useDispatch, useSelector } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import "./SignupForm.css";
 
 const SignupFormPage = () => {
@@ -94,9 +95,15 @@ const SignupFormPage = () => {
           <div className="social-login">
             <h3>log in via</h3>
             <div className="social-icons">
-              <a href="#" className="social-login__icon fab fa-instagram"></a>
-              <a href="#" className="social-login__icon fab fa-facebook"></a>
-              <a href="#" className="social-login__icon fab fa-twitter"></a>
+              <Link
+                to="#"
+                className="social-login__icon fab fa-instagram"
+              ></Link>
+              <Link
+                to="#"
+                className="social-login__icon fab fa-facebook"
+              ></Link>
+              <Link to="#" className="social-login__icon fab fa-twitter"></Link>
             </div>
           </div>
         </div>
