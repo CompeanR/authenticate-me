@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import ProfileButton from "./ProfileButton";
 
 const Navigation = () => {
   const sessionUser = useSelector((state) => state.session.user);
@@ -8,27 +9,21 @@ const Navigation = () => {
   return (
     <nav>
       {sessionUser ? (
-        <ul>
-          <li>
-            <Link to="/">Homepage</Link>
-          </li>
-          <li>
-            <Link to="/">Logout</Link>
-          </li>
-          <li>
-            <Link to="/signup">signup</Link>
-          </li>
-        </ul>
+        <>
+          <ProfileButton user={sessionUser} />
+        </>
       ) : (
         <ul>
           <li>
-            <Link to="/">Homepage</Link>
+            <NavLink exact to="/">
+              Homepage
+            </NavLink>
           </li>
           <li>
-            <Link to="/signin">Sign In</Link>
+            <NavLink to="/login">Login</NavLink>
           </li>
           <li>
-            <Link to="/signup">signup</Link>
+            <NavLink to="/signup">signup</NavLink>
           </li>
         </ul>
       )}
