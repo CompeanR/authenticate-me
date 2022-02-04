@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import * as sessionActions from "../../store/session";
+import "./ProfileButton.css";
 
 const ProfileButton = ({ user }) => {
   const [showMenu, setShowMenu] = useState(false);
@@ -32,17 +33,17 @@ const ProfileButton = ({ user }) => {
   };
 
   return (
-    <div>
-      <button onClick={openMenu}>
+    <div className="menu">
+      <button onClick={openMenu} className="menu__toggle">
         <i className="fas fa-id-badge"></i>
       </button>
 
       {showMenu && (
         <>
-          <ul>
-            <li>{user.username}</li>
-            <li>{user.email}</li>
-            <li>
+          <ul className="nav__list">
+            <li className="nav__list-ele">{user.username}</li>
+            <li className="nav__list-ele">{user.email}</li>
+            <li className="nav__list-ele">
               <button onClick={logout}>Log Out</button>
             </li>
           </ul>

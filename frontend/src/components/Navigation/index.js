@@ -8,23 +8,23 @@ const Navigation = () => {
   const sessionUser = useSelector((state) => state.session.user);
 
   return (
-    <nav>
+    <nav className="nav">
       {sessionUser ? (
         <>
           <ProfileButton user={sessionUser} />
         </>
       ) : (
-        <ul>
-          <li>
+        <ul className="nav__list">
+          <li className="nav__list-ele">
             <NavLink exact to="/">
               Homepage
             </NavLink>
           </li>
-          <li>
+          <li className="nav__list-ele">
             <NavLink to="/login">Login</NavLink>
           </li>
-          <li>
-            <NavLink to="/signup">signup</NavLink>
+          <li className="nav__list-ele">
+            <NavLink to="/signup">Sign Up</NavLink>
           </li>
         </ul>
       )}
