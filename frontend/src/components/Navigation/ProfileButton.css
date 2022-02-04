@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:400, 700");
 
 .nav__toggle {
+  margin: 10px 0;
   padding: 10px 8px;
   text-decoration: none;
   font-size: 17px;
@@ -8,6 +9,10 @@
   background: #e4e4e4;
   border-radius: 15px;
   border-color: #fff;
+}
+
+.nav__toggle:hover {
+  background: #fff;
 }
 
 .nav__list-ele button {
