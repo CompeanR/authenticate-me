@@ -8,7 +8,7 @@
 
 .nav__list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   list-style-type: none;
 }
@@ -16,7 +16,6 @@
 .nav__list-ele,
 .nav__list-ele a {
   position: relative;
-  width: 33.333%;
   display: table-cell;
   text-align: center;
   color: #e4e4e4;

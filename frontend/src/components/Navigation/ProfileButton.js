@@ -33,9 +33,9 @@ const ProfileButton = ({ user }) => {
   };
 
   return (
-    <div className="menu">
-      <button onClick={openMenu} className="menu__toggle">
-        <i className="fas fa-id-badge"></i>
+    <>
+      <button onClick={openMenu} className="nav__toggle">
+        <i class="fas fa-id-badge fa-2x"></i>
       </button>
 
       {showMenu && (
@@ -49,7 +49,7 @@ const ProfileButton = ({ user }) => {
           </ul>
         </>
       )}
-    </div>
+    </>
   );
 };
 
