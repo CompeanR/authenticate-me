@@ -9,7 +9,7 @@ const LoginFormModal = () => {
   return (
     <>
       <button className="nav__modal-button" onClick={() => setShowModal(true)}>
-        Log In <i class="fas fa-sign-in-alt"></i>
+        Log In <i className="fas fa-sign-in-alt"></i>
       </button>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
