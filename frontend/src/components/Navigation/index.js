@@ -22,10 +22,10 @@ const Navigation = () => {
             </NavLink>
           </li>
           <li className="nav__list-ele">
-            <LoginFormModal />
+            <NavLink to="/signup">Sign Up</NavLink>
           </li>
           <li className="nav__list-ele">
-            <NavLink to="/signup">Sign Up</NavLink>
+            <LoginFormModal />
           </li>
         </ul>
       )}

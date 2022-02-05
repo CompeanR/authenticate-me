@@ -1,0 +1,15 @@
+.nav__modal-button {
+  width: 90px;
+  height: 35px;
+  border: none;
+  border-radius: 15px;
+  font-size: 17px;
+  font-weight: 600;
+  color: black;
+  background-color: #e4e4e4;
+  cursor: pointer;
+}
+
+.nav__modal-button:hover {
+  background-color: #ddddddee;
+}

@@ -44,7 +44,9 @@ const ProfileButton = ({ user }) => {
             <li className="nav__list-ele">{user.username}</li>
             <li className="nav__list-ele">{user.email}</li>
             <li className="nav__list-ele">
-              <button onClick={logout}>Log Out</button>
+              <button className="nav__list-ele-button" onClick={logout}>
+                Log Out
+              </button>
             </li>
           </ul>
         </>

@@ -15,7 +15,7 @@
   background: #fff;
 }
 
-.nav__list-ele button {
+.nav__list-ele-button {
   background-color: #1a80df;
   border: 1px solid transparent;
   border-radius: 3px;
@@ -30,16 +30,16 @@
   padding: 8px 0.8em;
 }
 
-.nav__list-ele button:hover,
-.nav__list-ele button:focus {
+.nav__list-ele-button:hover,
+.nav__list-ele-button:focus {
   background-color: #328adb;
 }
 
-.nav__list-ele button:focus {
+.nav__list-ele-button:focus {
   box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
 }
 
-.nav__list-ele button:active {
+.nav__list-ele-button:active {
   background-color: #0064bd;
   box-shadow: none;
 }
